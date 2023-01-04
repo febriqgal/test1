@@ -25,8 +25,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={`${styles.main}`}>
-        <h1 className="mb-4">Made by Febriqgal❤️</h1>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {data.map((e, i) => (
             <div
               className="hover:cursor-pointer bg-red-900 px-4 py-4 rounded-lg hover:scale-110 duration-500 hover:border"

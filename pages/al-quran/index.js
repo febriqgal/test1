@@ -30,8 +30,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={`${styles.main}`}>
-        <h1 className="mb-4">Made by Febriqgal❤️</h1>
-        <div className="grid grid-cols-6 gap-2">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2">
           {data.map((e, i) => (
             <div
               onClick={() => {

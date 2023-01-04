@@ -37,11 +37,11 @@ export default function Home() {
           </h1>
           <h1 className="mb-4 italic text-sm">{data.arti}</h1>
           <h1
-            className="w-[700px] text-justify m-auto"
+            className="text-justify m-auto"
             dangerouslySetInnerHTML={{ __html: data.deskripsi }}
           />
         </div>
-        <h1 className="w-[700px] m-auto gap-7 flex flex-col">
+        <h1 className="m-auto gap-7 flex flex-col">
           {data.ayat.map((e, i) => (
             <div key={i} className="bg-red-900 rounded-lg px-2 py-2">
               <h1 className="text-justify mb-2">
