@@ -1,20 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
-import { Fragment } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import Link from "next/link";
-import fp from "../../public/fp.png";
+import { Disclosure } from "@headlessui/react";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/router";
-const navigation = [
-  { name: "Al-qur'an", href: "/al-quran", current: true },
-  { name: "Daerah Indonesia", href: "/provinsi", current: false },
-];
+import fp from "../../public/fp.png";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 export default function Layout({ children }) {
+  const navigation = [
+    { name: "Al-qur'an", href: "/al-quran", current: false },
+    { name: "Daerah Indonesia", href: "/provinsi", current: false },
+  ];
   const route = useRouter();
   return (
     <>
