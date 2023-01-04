@@ -31,16 +31,15 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.main}>
-        <div>
-          {data.map((e, i) => (
-            <div key={i}>
-              <h1>
-                {e.id}. {e.name}
-              </h1>
-            </div>
-          ))}
-        </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 m-10 gap-4">
+        {data.map((e, i) => (
+          <div
+            className="hover:cursor-pointer bg-red-900 rounded-lg py-2 px-4"
+            key={i}
+          >
+            <h1>{e.name}</h1>
+          </div>
+        ))}
       </div>
     </>
   );

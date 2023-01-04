@@ -12,7 +12,7 @@ export default function index() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={`${styles.main}`}>
-        <h1>Test</h1>
+        <h1>My Portfolio</h1>
       </div>
     </Layout>
   );

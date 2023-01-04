@@ -30,7 +30,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="m-10">
+      <div className="m-10 lg:mx-80">
         <div className="mb-10 text-center">
           <h1 className="text-xl font-bold">
             {data.nomor}. {data.nama_latin} {`(${data.jumlah_ayat})`}

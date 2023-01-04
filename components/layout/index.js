@@ -4,7 +4,7 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import Link from "next/link";
 import fp from "../../public/fp.png";
 import Image from "next/image";
-
+import { useRouter } from "next/router";
 const navigation = [
   { name: "Al-qur'an", href: "/al-quran", current: true },
   { name: "Daerah Indonesia", href: "/provinsi", current: false },
@@ -15,9 +15,10 @@ function classNames(...classes) {
 }
 
 export default function Layout({ children }) {
+  const route = useRouter();
   return (
     <>
-      <Disclosure as="nav" className="bg-gray-800 z-[9999] fixed w-full">
+      <Disclosure as="nav" className="bg-gray-800">
         {({ open }) => (
           <>
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -32,12 +33,20 @@ export default function Layout({ children }) {
                 <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                   <div className="flex flex-shrink-0 items-center">
                     <Image
-                      className="block h-8 w-auto lg:hidden"
+                      title={"Beranda"}
+                      onClick={() => {
+                        route.push("/");
+                      }}
+                      className="block h-8 w-auto lg:hidden hover:cursor-pointer"
                       src={fp}
                       alt="#"
                     />
                     <Image
-                      className="hidden h-8 w-auto lg:block"
+                      title={"Beranda"}
+                      onClick={() => {
+                        route.push("/");
+                      }}
+                      className="hidden h-8 w-auto lg:block hover:cursor-pointer"
                       src={fp}
                       alt="#"
                     />

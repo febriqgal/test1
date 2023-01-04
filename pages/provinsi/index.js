@@ -14,7 +14,12 @@ export default function Home() {
   );
 
   if (error) return <div>failed to load</div>;
-  if (isLoading) return <Loading />;
+  if (isLoading)
+    return (
+      <div className={styles.main}>
+        <Loading />
+      </div>
+    );
 
   return (
     <Layout>
@@ -24,20 +29,19 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={`${styles.main}`}>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {data.map((e, i) => (
-            <div
-              className="hover:cursor-pointer bg-red-900 px-4 py-4 rounded-lg hover:scale-110 duration-500 hover:border"
-              onClick={() => {
-                route.push(`provinsi/${e.id}`);
-              }}
-              key={i}
-            >
-              <h1>{e.name}</h1>
-            </div>
-          ))}
-        </div>
+
+      <div className="m-10 my grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {data.map((e, i) => (
+          <div
+            className="hover:cursor-pointer bg-red-900 px-4 py-4 rounded-lg hover:scale-110 duration-500 hover:border"
+            onClick={() => {
+              route.push(`provinsi/${e.id}`);
+            }}
+            key={i}
+          >
+            <h1>{e.name}</h1>
+          </div>
+        ))}
       </div>
     </Layout>
   );
