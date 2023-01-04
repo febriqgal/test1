@@ -17,7 +17,7 @@ export default function Layout({ children }) {
   const route = useRouter();
   return (
     <>
-      <Disclosure as="nav" className="bg-gray-800">
+      <Disclosure as="nav" className="bg-white shadow-lg">
         {({ open }) => (
           <>
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -59,7 +59,7 @@ export default function Layout({ children }) {
                           className={classNames(
                             item.current
                               ? "bg-gray-900 text-white"
-                              : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                              : "hover:bg-slate-900 hover:text-white text-black",
                             "px-3 py-2 rounded-md text-sm font-medium"
                           )}
                           aria-current={item.current ? "page" : undefined}
@@ -70,7 +70,7 @@ export default function Layout({ children }) {
                     </div>
                   </div>
                 </div>
-                <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                {/* <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                   <button
                     type="button"
                     className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
@@ -78,9 +78,7 @@ export default function Layout({ children }) {
                     <span className="sr-only">View notifications</span>
                     <></>
                   </button>
-
-                  {/* Profile dropdown */}
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -94,8 +92,8 @@ export default function Layout({ children }) {
                     className={classNames(
                       item.current
                         ? "bg-gray-900 text-white"
-                        : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                      "block px-3 py-2 rounded-md text-base font-medium"
+                        : "text-black hover:bg-slate-900 hover:text-white",
+                      "block px-3 py-2 mx-4 rounded-md text-base font-medium"
                     )}
                     aria-current={item.current ? "page" : undefined}
                   >

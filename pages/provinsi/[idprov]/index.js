@@ -35,7 +35,7 @@ export default function Home() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 m-10 gap-4">
         {data.map((e, i) => (
           <div
-            className="hover:cursor-pointer bg-red-900 rounded-lg py-2 px-4"
+            className="text-white hover:cursor-pointer bg-red-900 rounded-lg py-2 px-4"
             onClick={() => {
               route.push(`${idprov}/${e.id}`);
             }}

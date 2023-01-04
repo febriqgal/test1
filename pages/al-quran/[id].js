@@ -43,7 +43,7 @@ export default function Home() {
         </div>
         <h1 className="m-auto gap-7 flex flex-col">
           {data.ayat.map((e, i) => (
-            <div key={i} className="bg-red-900 rounded-lg px-2 py-2">
+            <div key={i} className="bg-red-900 rounded-lg px-2 py-2 text-white">
               <h1 className="text-justify mb-2">
                 {e.nomor}. {e.ar}
               </h1>
@@ -58,7 +58,7 @@ export default function Home() {
         >
           <source src={data.audio} type="audio/mpeg" />
         </audio>
-        <div className="flex flex-col justify-between left-4 fixed z-50 bottom-4 text-center">
+        <div className="text-white flex flex-col justify-between left-4 fixed z-50 bottom-4 text-center">
           {data.surat_sebelumnya != true ? (
             <Link href={`/`} className="bg-red-900 rounded-xl py-1 px-4 mb-4">
               {"Beranda"}
