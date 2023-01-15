@@ -36,9 +36,9 @@ export default function Home() {
               route.push(`/al-quran/${e.nomor}`);
             }}
             key={i}
-            className="bg-red-900 px-2 text-white rounded-md py-4 text-center hover:cursor-pointer hover:scale-110 duration-500 hover:border hover:shadow-2xl"
+            className="border px-2 text-black rounded-md py-4 text-center hover:cursor-pointer hover:scale-110 duration-500 hover:border hover:shadow-2xl"
           >
-            <h1> {e.nama}</h1>
+            <h1 className="font-bold">{e.nama}</h1>
             <h1>
               {e.nomor}. {e.nama_latin} {`(${e.jumlah_ayat})`}
             </h1>

@@ -34,7 +34,7 @@ export default function Home() {
       <div className="grid grid-cols-1 sm:grid-cols-2 m-10 gap-4">
         {data.map((e, i) => (
           <div
-            className="text-white bg-red-900 rounded-lg py-2 px-4"
+            className="text-center hover:cursor-pointer border px-4 py-4 rounded-lg hover:scale-110 duration-500 hover:border hover:shadow-xl text-black"
             key={i}
           >
             <h1>{e.name}</h1>

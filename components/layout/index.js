@@ -13,6 +13,7 @@ export default function Layout({ children }) {
   const navigation = [
     { name: "Al-qur'an", href: "/al-quran", current: false },
     { name: "Daerah Indonesia", href: "/provinsi", current: false },
+    { name: "Berita", href: "/berita", current: false },
   ];
   const route = useRouter();
   return (
